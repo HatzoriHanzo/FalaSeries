@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="db_name">java-db</string>
+    <integer name="db_version">3</integer>
+    <string-array name="db_scan">
+        <item>com.example.falaserie.activities.bean.Usuario</item>
+        <item>com.example.falaserie.activities.bean.Series</item>
+
+    </string-array>
+    <string name="db_log">true</string>
+</resources>

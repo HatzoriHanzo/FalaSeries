@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Activities.EditarDadosActivity"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/imagem_adaptereditar"
+        android:layout_width="195dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="28dp"
+        android:outlineProvider="paddedBounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editar_dados_activity_edittext_sinopse">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/editar_cadastro_activity_btn_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/my_button_bg"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        android:outlineProvider="bounds"
+        android:text="Salvar Alterações"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/editar_dados_btn_deletar"
+        app:layout_constraintTop_toBottomOf="@+id/editar_dados_activity_btn_alterarimagem"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/editar_dados_activity_edittext_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
+        android:text="@string/Name"
+        android:textColor="#F4EFEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editar_dados_activity_edittext_sinopse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:textColor="#DADADA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editar_dados_activity_edittext_titulo" />
+
+    <Button
+        android:id="@+id/editar_dados_btn_deletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#DD0E0E"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/deletar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editar_dados_activity_btn_alterarimagem"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/editar_dados_activity_btn_alterarimagem"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Alterar imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagem_adaptereditar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
