@@ -26,8 +26,7 @@ import mobi.stos.httplib.HttpAsync;
 import mobi.stos.httplib.inter.FutureCallback;
 
 public class MainActivity extends AppCompatActivity {
-       private Button btn_Cadastrar;
-       private List<Series> series;
+    private List<Series> series;
        private ListView mListView;
        UsuarioBo usuarioBo = new UsuarioBo(this);
 
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         UsuarioBo usuarioBo = new UsuarioBo(this);
         Log.e("token", "onCreate: "+ usuarioBo.list().get(0).getToken());
         mListView = findViewById(R.id.list_series);
-        btn_Cadastrar = findViewById(R.id.btn_Cadastrar);
+        Button btn_Cadastrar = findViewById(R.id.btn_Cadastrar);
         btn_Cadastrar.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this,CadastroActivity.class);
             startActivity(intent);
@@ -109,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                else{
-                }
 
             }
 
@@ -124,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     } catch (Exception e) {
         e.printStackTrace();
     }
-        ;}
+        }
 
 
 

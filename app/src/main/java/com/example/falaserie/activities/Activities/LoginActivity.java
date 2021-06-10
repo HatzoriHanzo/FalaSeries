@@ -21,8 +21,7 @@ import mobi.stos.httplib.HttpAsync;
 import mobi.stos.httplib.inter.FutureCallback;
 
 public class LoginActivity extends AppCompatActivity {
-   private EditText edittext_password, edittext_login;
-   private  Button button_entrar;
+    private  Button button_entrar;
    private Usuario usuario;
    private UsuarioBo usuarioBo;
 
@@ -30,8 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edittext_login = findViewById(R.id.editText_Login);
-        edittext_password = findViewById(R.id.editTxt_Password);
+        EditText edittext_login = findViewById(R.id.editText_Login);
+        EditText edittext_password = findViewById(R.id.editTxt_Password);
         button_entrar = findViewById(R.id.btn_Login);
         btnLogin();
     }

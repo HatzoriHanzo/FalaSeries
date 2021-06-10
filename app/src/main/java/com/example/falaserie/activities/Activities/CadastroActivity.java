@@ -25,12 +25,9 @@ import mobi.stos.httplib.HttpAsync;
 import mobi.stos.httplib.inter.FutureCallback;
 
 public class CadastroActivity extends AppCompatActivity {
-    private  String token;
-    private Button btn_cadastrar, btn_cadastrarimagem, btn_cancelar;
     private EditText edittext_titulo,edittext_sinopse;
-    private int SELECT_PICTURE = 200;
+    private final int SELECT_PICTURE = 200;
     private ImageView IVPreviewImage;
-    private Uri selectedImageUri;
     private String img;
     UsuarioBo usuarioBo = new UsuarioBo(this);
     @Override
@@ -38,23 +35,21 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        btn_cadastrar = findViewById(R.id.btn_cadastrarseries);
-        btn_cadastrarimagem = findViewById(R.id.btn_cadastrarimagem);
-        btn_cancelar = findViewById(R.id.btn_cancelar);
+        Button btn_cadastrar = findViewById(R.id.btn_cadastrarseries);
+        Button btn_cadastrarimagem = findViewById(R.id.btn_cadastrarimagem);
+        Button btn_cancelar = findViewById(R.id.btn_cancelar);
 
         edittext_sinopse = findViewById(R.id.editTextTextsinopseserie);
         edittext_titulo = findViewById(R.id.editTextTexttitulodaserie);
 
         IVPreviewImage = findViewById(R.id.IVPreviewImage);
-        btn_cancelar.setOnClickListener(v -> {
-            finish();
-        });
-        btn_cadastrarimagem.setOnClickListener(v -> {
-            imageChooser();
-        });
+
+        btn_cancelar.setOnClickListener(v -> finish());
+
+        btn_cadastrarimagem.setOnClickListener(v -> imageChooser());
 
         btn_cadastrar.setOnClickListener(v -> {
-            if (edittext_titulo.getText().toString().equals("")||edittext_sinopse.getText().toString().equals("")||img.isEmpty()){
+            if (edittext_titulo.getText().toString().equals("")||edittext_sinopse.getText().toString().equals("")||img == null){
                 Toast.makeText(this, "Há campos vazios, preencha os campos ou insira uma imagem compatível.", Toast.LENGTH_SHORT).show();
             }
                 else{
@@ -126,7 +121,7 @@ public class CadastroActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
 
             if (requestCode == SELECT_PICTURE) {
-                selectedImageUri = data.getData();
+                Uri selectedImageUri = data.getData();
                 final InputStream imageStream;
                 try {
                     imageStream = getContentResolver().openInputStream(selectedImageUri);

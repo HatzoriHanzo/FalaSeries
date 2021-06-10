@@ -11,7 +11,6 @@ import com.example.falaserie.R;
 import com.example.falaserie.activities.bo.UsuarioBo;
 
 public class CadastroRealizadoActivity extends AppCompatActivity {
-    private Button btn_telainicial;
     private String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,7 @@ public class CadastroRealizadoActivity extends AppCompatActivity {
         UsuarioBo usuarioBo = new UsuarioBo(this);
         Log.e("token", "onCreate: "+ usuarioBo.list().get(0).getToken());
         setContentView(R.layout.activity_cadastro_realizado);
-        btn_telainicial = findViewById(R.id.dados_deletados_btn_telainicial);
+        Button btn_telainicial = findViewById(R.id.dados_deletados_btn_telainicial);
         btn_telainicial.setOnClickListener(v -> {
             Intent intent = new Intent(CadastroRealizadoActivity.this,MainActivity.class);
             intent.putExtra("TOKEN",token);

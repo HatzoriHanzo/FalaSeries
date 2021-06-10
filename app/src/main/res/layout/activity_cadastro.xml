@@ -97,9 +97,11 @@
         android:background="#F6EBEB"
         android:backgroundTint="#E6E0E0"
         android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
         android:inputType="textPersonName"
+        android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="@id/editTextTexttitulodaserie"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="@id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTexttitulodaserie" />
 

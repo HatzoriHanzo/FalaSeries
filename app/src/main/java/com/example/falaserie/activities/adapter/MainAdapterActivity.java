@@ -21,13 +21,9 @@ import com.squareup.picasso.Picasso;
 public class MainAdapterActivity extends ArrayAdapter<Series> {
 
 
-
-            private Context context;
-
-            public MainAdapterActivity(Context context, List<Series> series) {
+    public MainAdapterActivity(Context context, List<Series> series) {
                 super(context,0 ,series);
-                this.context = context;
-            }
+    }
 
 
 

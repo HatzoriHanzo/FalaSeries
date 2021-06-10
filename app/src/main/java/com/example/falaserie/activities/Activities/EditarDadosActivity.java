@@ -17,8 +17,6 @@ import android.widget.Toast;
 import com.example.falaserie.R;
 import com.example.falaserie.activities.Util.Util;
 import com.example.falaserie.activities.bean.Series;
-import com.example.falaserie.activities.bean.Usuario;
-import com.example.falaserie.activities.bo.SeriesBo;
 import com.example.falaserie.activities.bo.UsuarioBo;
 import com.squareup.picasso.Picasso;
 
@@ -31,34 +29,28 @@ import mobi.stos.httplib.inter.FutureCallback;
 
 public class EditarDadosActivity extends AppCompatActivity {
     private Series serie = new Series();
-    private ConstraintLayout constraintLayout;
-    private Button btn_editar,btn_excluir,btn_alterarImagem;
     private EditText editText_titulo,editText_sinopse;
     private ImageView imageView;
     private UsuarioBo usuarioBo;
-    private int SELECT_PICTURE = 200;
-    private Uri selectedImageUri;
+    private final int SELECT_PICTURE = 200;
     private String img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_dados);
-        constraintLayout = findViewById(R.id.background);
         imageView = findViewById(R.id.imagem_adaptereditar);
         editText_titulo = findViewById(R.id.editar_dados_activity_edittext_titulo);
         editText_sinopse = findViewById(R.id.editar_dados_activity_edittext_sinopse);
-        btn_editar = findViewById(R.id.editar_cadastro_activity_btn_editar);
-        btn_excluir = findViewById(R.id.editar_dados_btn_deletar);
-        btn_alterarImagem = findViewById(R.id.editar_dados_activity_btn_alterarimagem);
+        Button btn_editar = findViewById(R.id.editar_cadastro_activity_btn_editar);
+        Button btn_excluir = findViewById(R.id.editar_dados_btn_deletar);
+        Button btn_alterarImagem = findViewById(R.id.editar_dados_activity_btn_alterarimagem);
         usuarioBo = new UsuarioBo(this);
         serie = (Series) getIntent().getSerializableExtra("SERIE");
         editText_titulo.setText(serie.getLabel());
         editText_sinopse.setText(serie.getDescricao());
         Picasso.get().load(serie.getImagem()).into(imageView);
 
-        btn_alterarImagem.setOnClickListener(v -> {
-            imageChooser();
-        });
+        btn_alterarImagem.setOnClickListener(v -> imageChooser());
 
         btn_excluir.setOnClickListener(v -> {
             try {
@@ -108,7 +100,7 @@ public class EditarDadosActivity extends AppCompatActivity {
         });
 
         btn_editar.setOnClickListener(v -> {
-            if (editText_titulo.getText().toString().equals("")||editText_sinopse.getText().toString().equals("")||img.isEmpty()){
+            if (editText_titulo.getText().toString().equals("")||editText_sinopse.getText().toString().equals("")||img == null){
                 Toast.makeText(this, "Há campos vazios, preencha os campos ou insira uma imagem compatível.", Toast.LENGTH_SHORT).show();
             }
             else {
@@ -179,7 +171,7 @@ public class EditarDadosActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
 
             if (requestCode == SELECT_PICTURE) {
-                selectedImageUri = data.getData();
+                Uri selectedImageUri = data.getData();
                 final InputStream imageStream;
                 try {
                     imageStream = getContentResolver().openInputStream(selectedImageUri);
