@@ -3,6 +3,8 @@ package com.example.falaserie.activities.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -34,6 +36,7 @@ public class EditarDadosActivity extends AppCompatActivity {
     private UsuarioBo usuarioBo;
     private final int SELECT_PICTURE = 200;
     private String img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,50 +56,70 @@ public class EditarDadosActivity extends AppCompatActivity {
         btn_alterarImagem.setOnClickListener(v -> imageChooser());
 
         btn_excluir.setOnClickListener(v -> {
-            try {
-                HttpAsync httpAsync = new HttpAsync(new URL(getString(R.string.base_url)+"series/"+serie.getId()));
-                httpAsync.addHeader("Authorization","Bearer " + usuarioBo.list().get(0).getToken());
-                httpAsync.setDebug(true);
-                httpAsync.delete(new FutureCallback() {
-                    @Override
-                    public void onBeforeExecute() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            new AlertDialog.Builder(this)
+                    .setTitle("Quer mesmo deletar a série ?")
+                    .setMessage("")
+                    .setPositiveButton("Confirmar - a série é horrivel",new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    try {
+                        HttpAsync httpAsync = new HttpAsync(new URL(getString(R.string.base_url)+"series/"+serie.getId()));
+                        httpAsync.addHeader("Authorization","Bearer " + usuarioBo.list().get(0).getToken());
+                        httpAsync.setDebug(true);
+                        httpAsync.delete(new FutureCallback() {
+                            @Override
+                            public void onBeforeExecute() {
 
 
+                            }
+
+                            @Override
+                            public void onAfterExecute() {
+                                Intent intent = new Intent(EditarDadosActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+
+                            @Override
+                            public void onSuccess(int responseCode, Object object) {
+                                System.out.println("Response code "+ responseCode);
+
+                                if (responseCode == 204){
+                                    Toast.makeText(EditarDadosActivity.this, "Série Deletada com Sucesso.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(EditarDadosActivity.this,DadosDeletadosActivity.class);
+                                    startActivity(intent);
+
+
+                                }
+                                else{
+                                    Toast.makeText(EditarDadosActivity.this, "Não foi possível deletar a série...", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+
+                            @Override
+                            public void onFailure(Exception exception) {
+
+                            }
+                        });
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
+                }
+            }).setNegativeButton("Cancelar,confundi com Friends", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
 
-                    @Override
-                    public void onAfterExecute() {
-                        Intent intent = new Intent(EditarDadosActivity.this,MainActivity.class);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onSuccess(int responseCode, Object object) {
-                        System.out.println("Response code "+ responseCode);
-
-                        if (responseCode == 204){
-                            Toast.makeText(EditarDadosActivity.this, "Série Deletada com Sucesso.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(EditarDadosActivity.this,DadosDeletadosActivity.class);
-                            startActivity(intent);
+                }
+            })
+            .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+            ;
 
 
-                        }
-                        else{
-                            Toast.makeText(EditarDadosActivity.this, "Não foi possível deletar a série...", Toast.LENGTH_SHORT).show();
-                        }
 
-                    }
-
-                    @Override
-                    public void onFailure(Exception exception) {
-
-                    }
-                });
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         });
 
         btn_editar.setOnClickListener(v -> {
