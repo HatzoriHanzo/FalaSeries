@@ -11,6 +11,8 @@ import android.widget.EditText;
 import com.example.falaserie.R;
 import com.example.falaserie.activities.bean.Usuario;
 import com.example.falaserie.activities.bo.UsuarioBo;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,9 +31,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        EditText edittext_login = findViewById(R.id.editText_Login);
-        EditText edittext_password = findViewById(R.id.editTxt_Password);
+        TextInputLayout edittext_login = findViewById(R.id.editText_Login);
+        TextInputLayout edittext_password = findViewById(R.id.editTxt_Password);
         button_entrar = findViewById(R.id.btn_Login);
+
         btnLogin();
     }
 

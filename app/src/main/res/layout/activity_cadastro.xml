@@ -12,15 +12,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#F10B0B"
+        android:drawableStart="@drawable/ic_vector"
+        android:drawablePadding="10dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/btn_cadastrarimagem"
+        android:textAllCaps="false"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextsinopseserie"
         app:layout_constraintEnd_toEndOf="@+id/editTextTexttitulodaserie"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="@+id/editTextTexttitulodaserie"
         app:layout_constraintTop_toBottomOf="@+id/editTextTexttitulodaserie"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.07" />
 
     <Button
         android:id="@+id/btn_cadastrarseries"
@@ -28,24 +31,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="196dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:fontFamily="@font/montserrat_bold"
         android:text="Cadastrar"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextsinopseserie"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_cancelar"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextsinopseserie"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="295dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Sinopse:"
@@ -53,23 +56,21 @@
         android:textColorHighlight="#000000"
         android:textColorLink="#050505"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextsinopseserie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTexttitulodaserie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="24dp"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="109dp"
-        android:background="#ECDBDB"
+        android:background="@drawable/rounded_edittext"
         android:backgroundTint="#EDEBEB"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@id/editTextTextsinopseserie"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,27 +82,25 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextsinopseserie"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_cadastrarimagem"
-        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_bias="1.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/editTextTextsinopseserie"
         android:layout_width="283dp"
         android:layout_height="167dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="85dp"
-        android:background="#F6EBEB"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/rounded_edittext"
         android:backgroundTint="#E6E0E0"
         android:ems="10"
         android:fontFamily="@font/montserrat_bold"
+        android:gravity="top|left"
         android:inputType="textPersonName"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="@id/editTextTexttitulodaserie"
-        app:layout_constraintHorizontal_bias="0.365"
+        android:text="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/IVPreviewImage"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="@id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTexttitulodaserie" />
 
@@ -111,16 +110,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="196dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Cancelar"
+        android:textColor="@color/white"
+        android:background="@drawable/my_button_bg"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/editTextTextsinopseserie"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextsinopseserie"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"

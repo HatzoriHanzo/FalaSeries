@@ -52,12 +52,13 @@
         android:id="@+id/dados_deletados_btn_telainicial"
         android:layout_width="292dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginBottom="236dp"
         android:backgroundTint="#D61C1C"
         android:fontFamily="@font/montserrat_bold"
         android:text="Voltar para o menu principal"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

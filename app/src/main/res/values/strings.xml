@@ -2,9 +2,9 @@
     <string name="app_name">FalaSerie</string>
     <string name="edittxt_password">Insira seu password</string>
     <string name="login">Entrar</string>
-    <string name="edittxt_login">Digite o email</string>
-    <string name="btn_Cadastrar">+ Cadastrar série nova</string>
-    <string name="btn_cadastrarimagem">Click para adicionar uma imagem</string>
+    <string name="edittxt_login"></string>
+    <string name="btn_Cadastrar">Cadastrar série nova</string>
+    <string name="btn_cadastrarimagem">Adicionar uma imagem</string>
     <string name="editar">Editar</string>
     <string name="Name">Name</string>
     <string name="name">Name</string>

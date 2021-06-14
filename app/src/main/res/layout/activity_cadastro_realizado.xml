@@ -36,7 +36,7 @@
         android:id="@+id/textView4"
         android:layout_width="301dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Cadastre mais séries para ter o seu repertório completo na palma da sua mão!"
@@ -56,6 +56,7 @@
         android:backgroundTint="#D61C1C"
         android:fontFamily="@font/montserrat_bold"
         android:text="Ok!"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
