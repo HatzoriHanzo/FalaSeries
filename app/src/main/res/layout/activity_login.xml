@@ -27,6 +27,7 @@
         android:layout_marginStart="24dp"
         android:textColorHint="@color/white"
         android:hint="Login"
+        app:hintTextColor="@color/white"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/editTxt_Password"
@@ -46,21 +47,26 @@
         android:id="@+id/editTxt_Password"
         android:layout_width="match_parent"
         android:theme="@style/TextInputLayoutWhite"
-        android:layout_height="39dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704">
+        app:layout_constraintVertical_bias="0.704"
+        android:hint="Senha"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
             android:inputType="textPassword"
-            android:textColorHint="#050505" />
+            android:textColor="@color/white"
+
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -71,7 +77,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="@android:color/holo_red_dark"
-        android:fontFamily="@font/montserrat_bold"
         android:text="@string/login"
         android:textAllCaps="false"
         android:textStyle="bold"

@@ -54,7 +54,6 @@
         android:layout_height="61dp"
         android:layout_marginBottom="236dp"
         android:backgroundTint="#D61C1C"
-        android:fontFamily="@font/montserrat_bold"
         android:text="Voltar para o menu principal"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
