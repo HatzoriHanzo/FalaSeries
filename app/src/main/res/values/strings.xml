@@ -6,7 +6,7 @@
     <string name="btn_Cadastrar">Cadastrar série nova</string>
     <string name="btn_cadastrarimagem">Adicionar uma imagem</string>
     <string name="editar">Editar</string>
-    <string name="Name">Name</string>
-    <string name="name">Name</string>
+    <string name="Name"></string>
+    <string name="name"></string>
     <string name="deletar">Deletar</string>
 </resources>

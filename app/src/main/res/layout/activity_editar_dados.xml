@@ -45,12 +45,14 @@
         android:id="@+id/editar_dados_activity_edittext_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_edittext"
         android:ems="10"
-        android:layout_marginTop="16dp"
         android:inputType="textPersonName"
         android:text="@string/Name"
-        android:textColor="#F4EFEF"
+        android:textColor="#0C0C0C"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,12 +60,14 @@
         android:id="@+id/editar_dados_activity_edittext_sinopse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_edittext"
         android:ems="10"
-        android:layout_marginTop="16dp"
         android:inputType="textPersonName"
         android:text="@string/name"
-        android:textColor="#DADADA"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editar_dados_activity_edittext_titulo" />
 
@@ -102,5 +106,26 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagem_adaptereditar" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:text="Título:"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editar_dados_activity_edittext_titulo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="4dp"
+        android:text="Sinopse:"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editar_dados_activity_edittext_sinopse"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
