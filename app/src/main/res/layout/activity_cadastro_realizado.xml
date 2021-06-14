@@ -55,6 +55,7 @@
         android:layout_marginBottom="172dp"
         android:backgroundTint="#D61C1C"
         android:text="Ok!"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

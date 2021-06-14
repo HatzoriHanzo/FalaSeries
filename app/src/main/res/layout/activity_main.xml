@@ -9,18 +9,20 @@
 
     <Button
         android:id="@+id/btn_Cadastrar"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:text="@string/btn_Cadastrar"
-        android:drawablePadding="10dp"
-        android:paddingStart="56dp"
-        android:textAlignment="textStart"
+        android:backgroundTint="#FB2B3F"
         android:drawableStart="@drawable/ic_plus"
+        android:drawablePadding="10dp"
+        android:textAllCaps="false"
+        android:paddingStart="40dp"
+        android:text="@string/btn_Cadastrar"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@id/list_series"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

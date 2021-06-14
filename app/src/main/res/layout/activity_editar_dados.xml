@@ -82,6 +82,7 @@
         android:backgroundTint="#DD0E0E"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/deletar"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

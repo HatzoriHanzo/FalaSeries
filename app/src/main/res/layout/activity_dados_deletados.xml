@@ -56,6 +56,7 @@
         android:backgroundTint="#D61C1C"
         android:text="Voltar para o menu principal"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.607"
