@@ -19,10 +19,10 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextsinopseserie"
         app:layout_constraintEnd_toEndOf="@+id/editTextTexttitulodaserie"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTexttitulodaserie"
         app:layout_constraintTop_toBottomOf="@+id/editTextTexttitulodaserie"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <Button
         android:id="@+id/btn_cadastrarseries"
@@ -47,8 +47,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Sinopse:"
         android:textColor="#FFFAFA"
@@ -59,17 +59,17 @@
 
     <EditText
         android:id="@+id/editTextTexttitulodaserie"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="24dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="109dp"
         android:background="@drawable/rounded_edittext"
         android:backgroundTint="#EDEBEB"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@id/editTextTextsinopseserie"
-        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,19 +88,19 @@
 
     <EditText
         android:id="@+id/editTextTextsinopseserie"
-        android:layout_width="283dp"
+        android:layout_width="250dp"
         android:layout_height="167dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_edittext"
         android:backgroundTint="#E6E0E0"
         android:ems="10"
-        android:fontFamily="@font/montserrat_bold"
         android:gravity="top|left"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/IVPreviewImage"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTexttitulodaserie" />
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="@+id/IVPreviewImage"
+        app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage" />
 
     <Button
         android:id="@+id/btn_cancelar"
@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginEnd="231dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Título da série:"
         android:textColor="#FFFAFA"

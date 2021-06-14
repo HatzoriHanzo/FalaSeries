@@ -36,7 +36,7 @@
         android:id="@+id/textView4"
         android:layout_width="301dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Cadastre mais séries para ter o seu repertório completo na palma da sua mão!"

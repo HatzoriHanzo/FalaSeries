@@ -15,7 +15,7 @@
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="@string/btn_Cadastrar"
         android:drawablePadding="10dp"
-        android:paddingStart="48dp"
+        android:paddingStart="56dp"
         android:textAlignment="textStart"
         android:drawableStart="@drawable/ic_plus"
         app:layout_constraintBottom_toTopOf="@id/list_series"
